@@ -5,6 +5,9 @@
 # Usage
 //TODO
 
+# Thanks
+Thanks to Ben Manes for his [versions plugin](https://github.com/ben-manes/gradle-versions-plugin) and Square for [SQLDelight](https://github.com/square/sqldelight) which were both great references for creating a Gradle plugin.
+
 License
 --------
 
