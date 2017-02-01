@@ -1,0 +1,7 @@
+apply plugin: 'kotlin'
+apply plugin: 'java-gradle-plugin'
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+}

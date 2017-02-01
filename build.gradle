@@ -1,0 +1,28 @@
+apply plugin: 'com.github.ben-manes.versions'
+buildscript {
+    ext.kotlinVersion = '1.0.6'
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        //check with ./gradlew dependencyUpdates
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.13.0'
+    }
+}
+
+// See http://blog.joda.org/2014/02/turning-off-doclint-in-jdk-8-javadoc.html.
+if (JavaVersion.current().isJava8Compatible()) {
+    allprojects {
+        tasks.withType(Javadoc) {
+            options.addStringOption('Xdoclint:none', '-quiet')
+        }
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
