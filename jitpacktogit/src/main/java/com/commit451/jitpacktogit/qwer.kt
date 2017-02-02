@@ -6,10 +6,9 @@ import org.gradle.api.Project
 /**
  * Behold the plugin
  */
-class JitpackToGitPlugin : Plugin<Project> {
-
+class qwer : Plugin<Project> {
 
     override fun apply(project: Project?) {
-        project!!.tasks.create("jitpacktogit", JitpackToGitTask::class.java)
+        project!!.tasks.create("jitpacktogit", asdf::class.java)
     }
 }
