@@ -14,6 +14,7 @@ class IntegrationTest {
     fun pluginFoundTest() {
         val project = ProjectBuilder.builder().build()
         project.pluginManager.apply("com.commit451.jitpacktogit")
-        Assert.assertTrue(project.tasks.getByName("jitpacktogit") is JitPackToGitTask)
+        val task = project.tasks.getByName("jitpacktogit")
+        Assert.assertTrue(task is JitPackToGitTask)
     }
 }

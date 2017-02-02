@@ -9,7 +9,7 @@ import org.gradle.api.tasks.TaskAction
 open class JitPackToGitTask : DefaultTask() {
 
     init {
-        description = "Displays the dependency updates for the project."
+        description = "Shows your JitPack dependencies as their Git URLs"
         group = "Help"
     }
 
