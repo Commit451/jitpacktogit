@@ -1,12 +1,6 @@
 apply plugin: 'kotlin'
 apply plugin: 'java-gradle-plugin'
-apply plugin: 'maven'
-
-// Append any extra dependencies to the test fixtures via a custom configuration classpath. This
-// allows us to apply additional plugins in a fixture while still leveraging dependency resolution
-// and de-duplication semantics.
-def metadata = tasks.getByName('pluginUnderTestMetadata')
-metadata.setPluginClasspath(metadata.getPluginClasspath())
+//apply plugin: 'maven'
 
 dependencies {
     compileOnly gradleApi()
@@ -16,13 +10,13 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
-group = 'com.commit451'
-version = '1.0.0'
+//group = 'com.commit451'
+//version = '1.0.0'
 
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository(url: uri('../repo'))
-        }
-    }
-}
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            repository(url: uri('../repo'))
+//        }
+//    }
+//}
