@@ -1,9 +1,44 @@
 # jitpack-to-git
 
+Gradle plugin that displays jitpack.io dependencies as their git URLs
+
 [![Build Status](https://travis-ci.org/Commit451/jitpack-to-git.svg?branch=master)](https://travis-ci.org/Commit451/jitpack-to-git)
 
+# Gradle Dependency
+This plugin is available via JitPack. Go figure!
+
+### `plugins` block:
+You can add it to your build script using the following configuration:
+```groovy
+plugins {
+    id 'com.github.Commit451.jitpacktogit' version 'latest.version.here'
+}
+```
+or via the
+
+### `buildscript` block:
+```groovy
+apply plugin: 'com.commit451.jitpacktogit'
+
+buildscript {
+  repositories {
+    jcenter()
+    maven { url "https://jitpack.io" }
+  }
+
+  dependencies {
+    classpath 'com.github.Commit451:jitpacktogit:latest.version.here'
+  }
+}
+```
+
 # Usage
-//TODO
+```shell
+./gradlew jitpacktogit
+```
+
+# Note
+This will only work for JitPack dependencies that follow the normal `com.github.{user}` structure. If the dependency is using a custom domain within JitPack, the URL will not be resolved.
 
 # Thanks
 Thanks to Ben Manes for his [versions plugin](https://github.com/ben-manes/gradle-versions-plugin) and Square for [SQLDelight](https://github.com/square/sqldelight) which were both great references for creating a Gradle plugin.
