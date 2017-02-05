@@ -1,11 +1,12 @@
 buildscript {
     repositories {
+        jcenter()
         maven {
             url uri('../repo')
         }
     }
     dependencies {
-        classpath group: 'com.commit451', name: 'jitpacktogit', version: '1.0-SNAPSHOT'
+        classpath group: 'com.commit451', name: 'jitpacktogit', version: '1.0.0'
     }
 }
 

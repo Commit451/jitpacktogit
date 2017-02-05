@@ -16,7 +16,24 @@ open class JitPackToGitTask : DefaultTask() {
     @TaskAction
     fun jitpacktogit() {
         project.evaluationDependsOnChildren()
+        project.configurations.addAll(project.buildscript.configurations)
 
-        System.out.println("hi")
+        val dependencies = project.configurations
+                .flatMap { it.allDependencies }
+                .toSet()
+
+        val jitpackUrls = dependencies.mapNotNull {
+            Resolver.resolveToUrl(it.group, it.name)
+        }
+
+        if (jitpackUrls.isEmpty()) {
+            System.out.println("\nNo JitPack URLs found in project")
+        } else {
+            System.out.println("\nJitPack URLs:\n")
+            for (url in jitpackUrls) {
+                System.out.println(url)
+            }
+        }
+
     }
 }
