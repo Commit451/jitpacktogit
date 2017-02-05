@@ -1,6 +1,5 @@
 apply plugin: 'kotlin'
 apply plugin: 'java-gradle-plugin'
-//apply plugin: 'maven'
 
 dependencies {
     compileOnly gradleApi()
@@ -9,14 +8,3 @@ dependencies {
 
     testCompile 'junit:junit:4.12'
 }
-
-//group = 'com.commit451'
-//version = '1.0.0'
-
-//uploadArchives {
-//    repositories {
-//        mavenDeployer {
-//            repository(url: uri('../repo'))
-//        }
-//    }
-//}

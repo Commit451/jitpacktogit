@@ -1,1 +1,1 @@
-include ':jitpacktogit', ':sample'
+include ':jitpacktogit'

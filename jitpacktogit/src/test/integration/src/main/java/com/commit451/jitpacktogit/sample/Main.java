@@ -1,7 +1,7 @@
 package com.commit451.jitpacktogit.sample;
 
 /**
- * Sample which takes states from a json source and converts them to appropriate resources files for Android
+ * Hello world
  */
 public class Main {
 

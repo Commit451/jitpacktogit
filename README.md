@@ -41,7 +41,7 @@ buildscript {
 This will only work for JitPack dependencies that follow the normal `com.github.{user}` structure. If the dependency is using a custom domain within JitPack, the URL will not be resolved.
 
 # Thanks
-Thanks to Ben Manes for his [versions plugin](https://github.com/ben-manes/gradle-versions-plugin) and Square for [SQLDelight](https://github.com/square/sqldelight) which were both great references for creating a Gradle plugin.
+Thanks to Ben Manes for his [versions plugin](https://github.com/ben-manes/gradle-versions-plugin) and Square for [SQLDelight](https://github.com/square/sqldelight) which were both great references for creating a Gradle plugin. The [docs](https://docs.gradle.org/current/userguide/custom_plugins.html#sec:custom_plugins_standalone_project) also helped out immensely.
 
 License
 --------

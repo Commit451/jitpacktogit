@@ -16,21 +16,13 @@ open class JitPackToGitTask : DefaultTask() {
     @TaskAction
     fun jitpacktogit() {
         project.evaluationDependsOnChildren()
-        project.configurations.addAll(project.buildscript.configurations)
+        val result = JitPackToGit.run(project)
 
-        val dependencies = project.configurations
-                .flatMap { it.allDependencies }
-                .toSet()
-
-        val jitpackUrls = dependencies.mapNotNull {
-            Resolver.resolveToUrl(it.group, it.name)
-        }
-
-        if (jitpackUrls.isEmpty()) {
+        if (result.jitPackUrls.isEmpty()) {
             System.out.println("\nNo JitPack URLs found in project")
         } else {
             System.out.println("\nJitPack URLs:\n")
-            for (url in jitpackUrls) {
+            for (url in result.jitPackUrls) {
                 System.out.println(url)
             }
         }
