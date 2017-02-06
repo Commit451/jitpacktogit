@@ -16,14 +16,11 @@ open class JitPackToGitTask : DefaultTask() {
 
     @Input
     var verbose = false
-        get() {
-            return System.getProperties()["verbose"] as? Boolean ?: return false
-        }
 
     @TaskAction
     fun jitpacktogit() {
         project.evaluationDependsOnChildren()
-        val result = JitPackToGit.run(project, verbose)
+        val result = JitPackToGit.run(project, verbose())
 
         if (result.jitPackUrls.isEmpty()) {
             System.out.println("\nNo JitPack URLs found in project")
@@ -33,5 +30,10 @@ open class JitPackToGitTask : DefaultTask() {
                 System.out.println(url)
             }
         }
+    }
+
+    fun verbose(): Boolean {
+        val value = System.getProperty("verbose", verbose.toString())
+        return value.toBoolean()
     }
 }

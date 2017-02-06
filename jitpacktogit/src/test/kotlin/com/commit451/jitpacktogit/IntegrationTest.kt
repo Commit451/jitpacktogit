@@ -28,7 +28,7 @@ class IntegrationTest {
         val runner = GradleRunner.create()
                 .withProjectDir(integrationRoot)
                 .withPluginClasspath()
-                .withArguments("jitpacktogit", "-Dverbose=true")
+                .withArguments("jitpacktogit", "-Dverbose=true", "--stacktrace")
 
         val result = runner.build()
         System.out.println(result.output)

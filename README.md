@@ -1,4 +1,4 @@
-# jitpack-to-git
+# jitpacktogit
 
 Gradle plugin that displays jitpack.io dependencies as their git URLs
 
