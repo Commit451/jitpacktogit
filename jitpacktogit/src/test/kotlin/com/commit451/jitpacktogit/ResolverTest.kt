@@ -15,4 +15,12 @@ class ResolverTest {
         val resolvedUrl = Resolver.resolveToUrl(group, name)
         Assert.assertEquals("https://github.com/Commit451/ResourcesPoet", resolvedUrl)
     }
+
+    @Test
+    fun resolveComplicatedTest() {
+        val group = "com.github.Commit451.Alakazam"
+        val name = "alakazam"
+        val resolvedUrl = Resolver.resolveToUrl(group, name)
+        Assert.assertEquals("https://github.com/Commit451/Alakazam", resolvedUrl)
+    }
 }
