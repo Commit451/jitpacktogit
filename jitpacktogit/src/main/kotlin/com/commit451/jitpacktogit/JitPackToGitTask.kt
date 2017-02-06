@@ -1,6 +1,7 @@
 package com.commit451.jitpacktogit
 
 import org.gradle.api.DefaultTask
+import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.TaskAction
 
 /**
@@ -13,10 +14,16 @@ open class JitPackToGitTask : DefaultTask() {
         group = "Help"
     }
 
+    @Input
+    var verbose = false
+        get() {
+            return System.getProperties()["verbose"] as? Boolean ?: return false
+        }
+
     @TaskAction
     fun jitpacktogit() {
         project.evaluationDependsOnChildren()
-        val result = JitPackToGit.run(project)
+        val result = JitPackToGit.run(project, verbose)
 
         if (result.jitPackUrls.isEmpty()) {
             System.out.println("\nNo JitPack URLs found in project")
@@ -26,6 +33,5 @@ open class JitPackToGitTask : DefaultTask() {
                 System.out.println(url)
             }
         }
-
     }
 }
