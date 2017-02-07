@@ -37,6 +37,16 @@ buildscript {
 ./gradlew jitpacktogit
 ```
 
+Output looks like:
+```
+com.github.Commit451:jitpacktogit:1.0.0 -> https://github.com/Commit451/jitpacktogit
+com.github.Commit451.Reptar:reptar:2.2.1 -> https://github.com/Commit451/Reptar
+com.github.Commit451:bypasses:1.0.4 -> https://github.com/Commit451/bypasses
+com.github.Commit451:ElasticDragDismissLayout:1.0.4 -> https://github.com/Commit451/ElasticDragDismissLayout
+com.github.Commit451.AdapterLayout:adapterlayout:1.1.0 -> https://github.com/Commit451/AdapterLayout
+com.github.Commit451.Easel:easel:2.1.1 -> https://github.com/Commit451/Easel
+```
+
 # Note
 This will only work for JitPack dependencies that follow the normal `com.github.{user}` structure. If the dependency is using a custom domain within JitPack, the URL will not be resolved.
 
