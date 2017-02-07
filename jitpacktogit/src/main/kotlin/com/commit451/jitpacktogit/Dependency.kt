@@ -12,3 +12,10 @@ import org.gradle.api.artifacts.Dependency
 fun Dependency.asHumanReadable(): String {
     return "Group: $group Name: $name Version: $version"
 }
+
+/**
+ * print a dependency in a human readable way
+ */
+fun Dependency.asColonThing(): String {
+    return "$group:$name:$version"
+}

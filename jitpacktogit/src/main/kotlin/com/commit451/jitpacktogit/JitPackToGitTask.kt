@@ -26,8 +26,8 @@ open class JitPackToGitTask : DefaultTask() {
             System.out.println("\nNo JitPack URLs found in project")
         } else {
             System.out.println("\nJitPack URLs:\n")
-            for (url in result.jitPackUrls) {
-                System.out.println(url)
+            for (dependencyResult in result.jitPackUrls) {
+                System.out.println("${dependencyResult.dependency.asColonThing()} -> ${dependencyResult.url}")
             }
         }
     }

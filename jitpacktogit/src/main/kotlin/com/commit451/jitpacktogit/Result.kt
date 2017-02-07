@@ -5,5 +5,5 @@ package com.commit451.jitpacktogit
  */
 class Result {
 
-    var jitPackUrls = mutableListOf<String>()
+    var jitPackUrls = mutableSetOf<DependencyResult>()
 }

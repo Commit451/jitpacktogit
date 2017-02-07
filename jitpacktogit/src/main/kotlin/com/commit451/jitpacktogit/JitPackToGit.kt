@@ -42,15 +42,14 @@ object JitPackToGit {
 
         val result = Result()
 
-
-        dependencies
-                .filter { it != null && it.group != null && it.name != null }
-                .map { Resolver.resolveToUrl(it.group, it.name) }
-                .forEach { url ->
-                    url?.let {
-                        result.jitPackUrls.add(it)
-                    }
+        for (dependency in dependencies) {
+            if (dependency != null && dependency.group != null && dependency.name != null) {
+                val url = Resolver.resolveToUrl(dependency.group, dependency.name)
+                url?.let {
+                    result.jitPackUrls.add(DependencyResult(it, dependency))
                 }
+            }
+        }
         return result
     }
 }
