@@ -2,7 +2,7 @@
 
 Gradle plugin that displays jitpack.io dependencies as their git URLs
 
-[![Build Status](https://travis-ci.org/Commit451/jitpack-to-git.svg?branch=master)](https://travis-ci.org/Commit451/jitpack-to-git) [![](https://jitpack.io/v/Commit451/jitpacktogit.svg)](https://jitpack.io/#Commit451/jitpacktogit)
+[![Build Status](https://travis-ci.org/Commit451/jitpacktogit.svg?branch=master)](https://travis-ci.org/Commit451/jitpacktogit) [![](https://jitpack.io/v/Commit451/jitpacktogit.svg)](https://jitpack.io/#Commit451/jitpacktogit)
 
 # Gradle Dependency
 This plugin is available via JitPack. Go figure!
