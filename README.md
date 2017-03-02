@@ -7,16 +7,6 @@ Gradle plugin that displays jitpack.io dependencies as their git URLs
 # Gradle Dependency
 This plugin is available via JitPack. Go figure!
 
-### `plugins` block:
-You can add it to your build script using the following configuration:
-```groovy
-plugins {
-    id 'com.github.Commit451.jitpacktogit' version 'latest.version.here'
-}
-```
-or via the
-
-### `buildscript` block:
 ```groovy
 apply plugin: 'com.commit451.jitpacktogit'
 
